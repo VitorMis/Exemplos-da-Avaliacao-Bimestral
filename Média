@@ -1,0 +1,33 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        double n1, n2, me;
+
+        System.out.println("Digite a primeira nota: ");
+        n1 = Double.parseDouble(input.nextLine());
+        System.out.println("Digite a primeira nota: ");
+        n2 = Double.parseDouble(input.nextLine());
+        me = media(n1, n2);
+        System.out.println("Media=" + me );
+        if (me==10) {
+            System.out.println("Aprovado com distinção");
+        }else{
+            if (me>=7){
+                System.out.println("Aprovado");
+            }else{
+                if (me <7){
+                    System.out.println("Reprovado");
+                }
+            }
+
+        }
+
+    }
+    public static double media(double none, double ntw){
+        return (none+ntw)/2;
